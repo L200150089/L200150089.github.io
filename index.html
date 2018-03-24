@@ -1,26 +1,90 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Sistem Informasi Geografis</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #006064;
+    opacity: 0.9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+}
+li {
+    float: left;
+}
+li a.active {
+    background-color: #B71C1C;
+    color: white;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #00BCD4;
+}
+li.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #BDBDBD;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {background-color: #EEEEEE}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+body {
+    margin: 0;
+    background-image: url("map.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.content {
+    margin-left: 100px;
+    padding-top: 100px;
+    text-align: center;
+    line-height: 1;
+    
+}
+</style>
+</head>
 <body>
 
-<h1>Lokasi Rumahku</h1>
+<ul>
+  <li><a class="active" href="#home"><b>Home</b></a></li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn"><b>Tugas</b></a>
+    <div class="dropdown-content">
+      <a href="addMarker.html">1. Add Marker</a>
+      <a href="Markercluster.html">2. Marker Cluster</a>
+      <a href="circles.html">3. Circles</a>
+      <a href="#">4. Heat Map</a>
+   <li style="float: right;padding:14px 40px ;color:white;">Dony Randy Alvian - L200150089 -</li>
 
-<div id="map" style="width:100%;height:600px;"></div>
+    </div>
+  </li>
+</ul>
 
-<script>
-function myMap() {
-  var myCenter = new google.maps.LatLng(-7.7602577,110.870455);
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {center: myCenter, zoom: 16.8};
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-  var marker = new google.maps.Marker({
-  position: myCenter,
-  animation: google.maps.Animation.BOUNCE
-  });
-  marker.setMap(map);
-}
-</script>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-1aLnFGU_fwVyTxpRuWzXQj_INKr7Aqw&callback=myMap"></script>
+<div class="content">
+  <h1 style="color:#E8F5E9; font-size: 30pt; text-shadow : 2px 2px  #006064;">Sistem Informasi Geografis</h1>
 
 </body>
 </html>
